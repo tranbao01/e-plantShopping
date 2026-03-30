@@ -250,3 +250,136 @@ body {
         text-align: center; /* Align text to the center */
       }
   }
+
+/* Category Section Styles */
+.category-section {
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 20px 0;
+    border-bottom: 2px solid #ddd;
+}
+
+.category-title {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Plants Container */
+.plants-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+/* Plant Card Styles */
+.plant-card {
+    flex: 0 0 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.plant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.plant-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.plant-name {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 15px 15px 10px 15px;
+    font-weight: bold;
+}
+
+.plant-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 15px 15px 15px;
+    flex: 1;
+    line-height: 1.4;
+}
+
+.plant-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+    gap: 10px;
+}
+
+.plant-cost {
+    font-size: 1.3rem;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.add-to-cart-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #45a049;
+}
+
+.add-to-cart-btn:active {
+    background-color: #3d8b40;
+    transform: scale(0.98);
+}
+
+/* Responsive Design for Plant Cards */
+@media (max-width: 1200px) {
+    .plant-card {
+        flex: 0 0 calc(33.33% - 20px);
+        max-width: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .plant-card {
+        flex: 0 0 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+    
+    .category-title {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .plant-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .plants-container {
+        padding: 0 10px;
+    }
+}
